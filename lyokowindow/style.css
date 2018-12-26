@@ -1,0 +1,243 @@
+*
+{
+    height:100%;
+    width:100%;
+    color: var(--special);
+    font-family: wingdings;
+    text-align: center;
+    font-weight: bold;
+    overflow:hidden;
+    --light-green: #55aec6;
+    --dark-green: #4a8492;
+    --dark-button: #2b4c55;
+    --triangles: #587077;
+    --special: #97b9c3;
+    --close-square: #76b4c4;
+}
+.window
+{
+    position: relative;
+}
+.horizontal
+{
+    background-image: repeating-linear-gradient(var(--light-green),var(--dark-green),var(--light-green) .5em, var(--dark-green) .5em);
+    background-repeat:no-repeat;
+}
+.vertical
+{
+    background-image: repeating-linear-gradient(var(--light-green),var(--dark-green), var(--light-green) .3em,var(--dark-green) .3em);
+    width:1em;
+    height:85%;
+}
+.left-bar
+{
+    float:left;
+}
+.right-bar
+{
+    float:right;
+}
+.top-bar
+{
+    height:8%;
+    float:left;
+    border-top: .5em solid;
+    border-color: var(--light-green);
+}
+.bottom-bar
+{
+    position: absolute;
+    height:7%;
+    margin-top: 52.3%;
+    /* Note: Need to override this margin in the obs CSS property if I'm using a square window
+       since the window being square sticks that in the wrong place */
+}
+[class*=button]
+{
+    float:left;
+}
+[class*=upper-button]
+{
+    height: 1em;
+    width: 6em;
+    margin-top: .8em;
+    margin-left: 1.1em;
+}
+[class*=lower-button]
+{
+    height: .5em;
+    width: 2.5em;
+    float:left;
+    margin-left: .3em;
+    margin-top: 1em;
+}
+[class*=button]
+{
+    background-color: var(--dark-button);
+}
+[class*=lower-button-f]
+{
+    float:right;
+    margin-left:0;
+    margin-right: .3em;
+    width: 0;
+    height: 0;
+    background: none;
+    border:none;
+    color:none;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-bottom: .5em solid var(--triangles);
+}
+.lower-button-one
+{
+    margin-left: 1em;
+    margin-right: -.3em;
+    width: 0;
+    height: 0;
+    background: none;
+    color:none;
+    border-top: .5em solid var(--dark-button);
+    border-right: .5em solid transparent;
+    border-left: 1em solid var(--dark-button);
+}
+.lower-button-two
+{
+    width: 0;
+    height: 0;
+    background: none;
+    color:none;
+    border-top: .5em solid var(--dark-button);
+    border-right: .5em solid transparent;
+    border-left: 1em solid var(--dark-button);
+    transform: rotate(180deg);
+}
+.lower-button-five
+{
+    margin-right: 1.2em;
+}
+.lower-button-four
+{
+    transform: rotate(180deg);
+}
+.special
+{
+    background-image: linear-gradient(to right, transparent 5%, var(--special) 35%,transparent 80%);
+    background-color:transparent;
+}
+[class*=dits]
+{
+    position: relative;
+    background-image: repeating-linear-gradient(to right,var(--special),transparent,var(--special) .5em,transparent .5em);
+    height: .3em;
+    float:right;
+    margin-top: 1.2em;
+}
+.dits-three
+{
+    width: 7em;
+    margin-left: .6em;
+}
+.dits-two
+{
+    width: 2em;
+}
+.dits-one
+{
+    width: 5em;
+    margin-right: .6em;
+}
+.upper-button-three
+{
+    float:right;
+    margin-right: 1.1em;
+    width: 4.5em;
+}
+.symbol
+{
+    float:left;
+    transform: blur(5em);
+}
+.cone
+{
+    width: 0;
+    height: 0;
+    border-left: .7em solid transparent;
+    border-right: .7em solid transparent;
+    border-top: .7em solid var(--special);
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    margin-top: .3em;
+    margin-left: .7em;
+}
+.triangle-up 
+{
+    width: 0;
+    height: 0;
+    border-left: .3em solid transparent;
+    border-right: .3em solid transparent;
+    border-bottom: .8em solid var(--special);
+    margin-top: .1em;
+}
+.dot
+{
+    background-image: radial-gradient(var(--special),transparent);
+    height: .5em;
+    width: .5em;
+    margin-top: .3em;
+    margin-left: .6em;
+}
+.El
+{
+    margin-left: 1.8em;
+    margin-top: -1em;
+    transform:rotate(90deg);
+}
+.arrowcontainer
+{
+    transform: scale(.8);
+}
+.down-arrow-leg
+{
+    width: .3em;
+    height: .5em;
+    background-color: var(--special);
+}
+.down-arrow-point 
+{
+    width: 0;
+    height: 0;
+    border-left: .3em solid transparent;
+    border-right: .3em solid transparent;
+    border-top: .6em solid var(--special);
+    margin-top: .4em;
+    margin-left: -.453em;
+}
+.pillar
+{
+    width: .5em;
+    height: .8em;
+    background-image: radial-gradient(var(--special) 50%,transparent);
+    margin-left: 3.2em;
+    margin-top: -.9em;
+}
+.dotted-circle
+{
+    width: .8em;
+    height: .8em;
+    background-image: radial-gradient(transparent .01em,var(--special));
+    border-radius: 50%;
+    float:right;
+    margin-right: 1em;
+    margin-top:-.9em;
+}
+.square
+{
+    background-color: var(--close-square);
+    height: .8em;
+    width: .8em;
+    float:right;
+    margin-right: .3em;
+    margin-top: .1em;
+}
+/* TODO: make the bottom bar no longer absolute positioned, so this can scale correctly to most (if not all resultions) without*/
